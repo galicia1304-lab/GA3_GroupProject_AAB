@@ -10,7 +10,7 @@ public class ShowBrewingMenu : MonoBehaviour
     public Canvas EPromtCanvas;
     public Canvas BrewingMenuCanvas;
 
-    //player controller
+    //player controller refrence
     public CharacterController PlayerController;
 
     void OnTriggerStay(Collider PLayerInside)
@@ -33,6 +33,7 @@ public class ShowBrewingMenu : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
             }
             //call on ExitButton to close the menu
+            //for some reason this doesnt work when player controller.enabled is set to false !?
             if (Input.GetKey(KeyCode.Escape))
             {
                 ExitButton();
@@ -43,6 +44,7 @@ public class ShowBrewingMenu : MonoBehaviour
     //button to close the brewing menu 
     public void ExitButton()
     {
+        Debug.Log("Exit button pressed");
         BrewingMenuCanvas.enabled=false;
         EPromtCanvas.enabled=true;
 

@@ -12,7 +12,7 @@ public class ShowPromt : MonoBehaviour
     void OnTriggerEnter(Collider PlayerCapsule)
     {
         //player charachter mus have the tag "player" for this to work
-        if (PlayerCapsule.tag == "Player");
+        if (PlayerCapsule.tag == "Player")
         {
             Debug.Log("Player should get E promt now");
             //assigned canvas should now be visalbe
