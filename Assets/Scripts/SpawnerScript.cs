@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
 
-    //designate what object is to be spawned
+    //designate what object(prefab) is to be spawned
     public GameObject PotionBrewSpawn;
 
 
