@@ -50,4 +50,14 @@ public class CustomerScript : MonoBehaviour
         }
         
     }
+
+    //ontrigger checking for potion that customer requested
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "PotionProduct")
+        {
+            currentState = NPCBehaviour.LeavingShop;
+        }
+    }
+
 }
