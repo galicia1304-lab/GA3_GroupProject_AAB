@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5943020430900887612}
   - component: {fileID: 4809249035301057851}
   - component: {fileID: 9019537470464591731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6973069749713067499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TestingPotionProduct
   m_TagString: PotionProduct
   m_Icon: {fileID: 0}

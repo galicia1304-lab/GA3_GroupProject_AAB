@@ -5,7 +5,7 @@ public class IngridientImageScript : MonoBehaviour
 {
     //public to acces the dropdown menu and image to change its display
     public TMP_Dropdown IngridientDropdown; //this designates what row dropdown value is
-    public Image ImageIngridient;
+    public Image ImageIngridient; //this is the image that holds the sprites
 
     //thie is code for changing the images 
     //public Image ImgaeIngridient (this is to designate what image is being changed) 
@@ -15,8 +15,6 @@ public class IngridientImageScript : MonoBehaviour
     public Sprite Ingridient2;
     public Sprite Ingridient3;
 
-    //{ ImageIngridient.sprite = newImage }
-    //A difrent image sprite would be needed to be set for each image
     
 
     // Update is called once per frame
