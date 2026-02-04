@@ -13,6 +13,8 @@ public class PickupScript : MonoBehaviour
     [SerializeField] private float PickupRange = 5.0f;
     [SerializeField] private float PickupForce = 150f;
 
+
+    //this scripts allows the player to pickup anything with rigid body, a filter will be for items the player should !only! be able to pick up
     private void Update()
     {
         //mouse being held down to pickup object
