@@ -10,10 +10,13 @@ public class IngridientImageScript : MonoBehaviour
     //thie is code for changing the images 
     //public Image ImgaeIngridient (this is to designate what image is being changed) 
 
-    //this changes image sprite with ingridients
-    //public sprite newImage 
+    //this holds the images
+    public Sprite Ingridient1;
+    public Sprite Ingridient2;
+    public Sprite Ingridient3;
+
     //{ ImageIngridient.sprite = newImage }
-    //A drifrint image sprite would be needed to be set for each image
+    //A difrent image sprite would be needed to be set for each image
     
 
     // Update is called once per frame
@@ -22,16 +25,19 @@ public class IngridientImageScript : MonoBehaviour
         if (IngridientDropdown.value == 0) //ingridient 1
         {
             ImageIngridient.color = Color.red;
+            ImageIngridient.sprite = Ingridient1;
         }
 
         else if (IngridientDropdown.value == 1) //ingridient 2
         {
             ImageIngridient.color = Color.blue;
+            ImageIngridient.sprite = Ingridient2;
         }
 
         else if (IngridientDropdown.value == 2) //ingridient 3
         {
             ImageIngridient.color = Color.green;
+            ImageIngridient.sprite = Ingridient3;
         }
     }
 }
