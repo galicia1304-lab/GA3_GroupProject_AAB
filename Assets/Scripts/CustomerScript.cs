@@ -36,7 +36,7 @@ public class CustomerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //set destination for destination
+        //set destination, this is designated in inspector
         _agent.SetDestination(_Destination.transform.position);
 
         switch (currentState)

@@ -24,19 +24,17 @@ public class IngridientImageScript : MonoBehaviour
     {
         if (IngridientDropdown.value == 0) //ingridient 1
         {
-            ImageIngridient.color = Color.red;
+
             ImageIngridient.sprite = Ingridient1;
         }
 
         else if (IngridientDropdown.value == 1) //ingridient 2
         {
-            ImageIngridient.color = Color.blue;
             ImageIngridient.sprite = Ingridient2;
         }
 
         else if (IngridientDropdown.value == 2) //ingridient 3
         {
-            ImageIngridient.color = Color.green;
             ImageIngridient.sprite = Ingridient3;
         }
     }
