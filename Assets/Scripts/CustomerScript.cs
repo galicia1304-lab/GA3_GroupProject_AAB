@@ -14,6 +14,7 @@ public class CustomerScript : MonoBehaviour
     private enum NPCBehaviour
     {
         EnteringShop,
+        WatingInShop,
         LeavingShop
     }
 
@@ -34,6 +35,7 @@ public class CustomerScript : MonoBehaviour
     }
 
     // Update is called once per frame
+    // states for npcbehaviour 
     void Update()
     {
         //set destination, this is designated in inspector
@@ -44,6 +46,11 @@ public class CustomerScript : MonoBehaviour
             case NPCBehaviour.EnteringShop:
                 Debug.Log("Customer is entering the shop");
                 break;
+
+            case NPCBehaviour.WatingInShop:
+                Debug.Log("Customer wating for potion");
+                break;
+
             case NPCBehaviour.LeavingShop:
                 Debug.Log("Customer is leaving the shop");
                 break;
@@ -54,9 +61,12 @@ public class CustomerScript : MonoBehaviour
     //ontrigger checking for potion that customer requested
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "PotionProduct")
+        if(other.gameObject.tag == "PotionProduct") 
         {
+            //this should be moved elsewhere in regards to npc dialogue
             currentState = NPCBehaviour.LeavingShop;
+            //object with tag is destroyd. creates illusion of npc reciving item
+            Destroy(other.gameObject);
         }
     }
 
