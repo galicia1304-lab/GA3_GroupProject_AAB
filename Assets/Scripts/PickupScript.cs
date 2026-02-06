@@ -26,12 +26,13 @@ public class PickupScript : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, PickupRange))
                 {
-                    //what object the raycast has hit
+                    //what object the raycast has hit and picks it up
                     PickupObject(hit.transform.gameObject);
                 }
             }
             else
             {
+                //player drops object
                 DropObject();
             }
         }
@@ -41,6 +42,7 @@ public class PickupScript : MonoBehaviour
         }
     }
 
+    //this designate where the object is the be held and at what distance from the player/raycast
     void MoveObject()
     {
         if (Vector3.Distance(heldObj.transform.position, HoldArea.position) > 0.1f)
@@ -50,18 +52,22 @@ public class PickupScript : MonoBehaviour
         }
     }
 
-
+    //object is held by force infront of the player
     void PickupObject(GameObject pickObj)
     {
-        if (pickObj.GetComponent<Rigidbody>())
+        //before pickup up object check if the tag is PotionProduct, this is the only items that should be picked up
+        if (pickObj.tag == "PotionProduct")
         {
-            heldObjRb = pickObj.GetComponent<Rigidbody>();
-            heldObjRb.useGravity = false;
-            heldObjRb.linearDamping = 10;
-            heldObjRb.constraints = RigidbodyConstraints.FreezeRotation;
+            if (pickObj.GetComponent<Rigidbody>())
+            {
+                heldObjRb = pickObj.GetComponent<Rigidbody>();
+                heldObjRb.useGravity = false;
+                heldObjRb.linearDamping = 10;
+                heldObjRb.constraints = RigidbodyConstraints.FreezeRotation;
 
-            heldObjRb.transform.parent = HoldArea;
-            heldObj = pickObj;
+                heldObjRb.transform.parent = HoldArea;
+                heldObj = pickObj;
+            }
         }
     }
 
