@@ -7,7 +7,10 @@ public class CustomerScript : MonoBehaviour
 {
     //note to self, customer currently has no way to enter "wating in shop" state
 
-   
+    //talk to John about this 
+    //this is what value the customer gets from the potions tehy recive
+    //public GameObject PotionValues;
+    //[SerializeField] int customerPotionValue;
 
     //refrence to navmesh agent
     private NavMeshAgent _agent;
@@ -82,6 +85,8 @@ public class CustomerScript : MonoBehaviour
             //this should be moved elsewhere in regards to npc dialogue
             currentState = NPCBehaviour.LeavingShop;
 
+            //here is the npc taking in the value of the potion which will affect the outcome of the narrative
+            //customerPotionValue = PotionValues.GetComponent<ReputationValues>().soldierReputation;
             Debug.Log("print here waht ingridient numbers are in the potion");
 
             //object with tag is destroyd. creates illusion of npc reciving item (specifie gameobject othervise destroyed object is still visable)
