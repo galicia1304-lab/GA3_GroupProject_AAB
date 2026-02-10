@@ -9,6 +9,7 @@ public class SpawnerScript : MonoBehaviour
 
     public void SpawnBottle()
     {
+        //prefab is spawned
         Instantiate(PotionBrewSpawn);
     }
 

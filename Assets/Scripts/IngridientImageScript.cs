@@ -10,7 +10,7 @@ public class IngridientImageScript : MonoBehaviour
     //thie is code for changing the images 
     //public Image ImgaeIngridient (this is to designate what image is being changed) 
 
-    //this holds the images
+    //this holds the diffrent images fo display
     public Sprite Ingridient1;
     public Sprite Ingridient2;
     public Sprite Ingridient3;

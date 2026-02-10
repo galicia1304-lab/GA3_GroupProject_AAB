@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class CustomerScript : MonoBehaviour
 {
+    //note to self, customer currently has no way to enter "wating in shop" state
+
+   
+
     //refrence to navmesh agent
     private NavMeshAgent _agent;
-
-    //this is what destination the npc is trying to get to (for testing)
-    //[SerializeField] private GameObject Destination;
-
 
     //Waypoitns for the npc to navigate towards (what these objects are is designated in the inspector)
     // [] array is for multiple objects 
@@ -25,6 +25,7 @@ public class CustomerScript : MonoBehaviour
         LeavingShop
     }
 
+    //what behaviour npc is exacuting.
     [SerializeField] private NPCBehaviour currentState;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -80,6 +81,9 @@ public class CustomerScript : MonoBehaviour
         {
             //this should be moved elsewhere in regards to npc dialogue
             currentState = NPCBehaviour.LeavingShop;
+
+            Debug.Log("print here waht ingridient numbers are in the potion");
+
             //object with tag is destroyd. creates illusion of npc reciving item (specifie gameobject othervise destroyed object is still visable)
             Destroy(other.gameObject);
             Debug.Log("Customer got Potion");
