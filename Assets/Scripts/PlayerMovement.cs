@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //this is needed when player controller is disabled when interacting with UI so it doesnt create a error
         if (controller.enabled == false)
         {
             return;

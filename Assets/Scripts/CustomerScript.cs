@@ -8,9 +8,9 @@ public class CustomerScript : MonoBehaviour
     //note to self, customer currently has no way to enter "wating in shop" state
 
     //talk to John about this 
-    //this is what value the customer gets from the potions tehy recive
-    //public GameObject PotionValues;
-    //[SerializeField] int customerPotionValue;
+    //this is what value the customer gets from the potions they recive
+    int customerRecivedPotionValue1 = 0;
+    int customerRecivedPotionValue2 = 0;
 
     //refrence to navmesh agent
     private NavMeshAgent _agent;
@@ -82,6 +82,26 @@ public class CustomerScript : MonoBehaviour
         //if its a potion procced
         if(other.gameObject.tag == "PotionProduct") 
         {
+            PotionInformation PotionValue = other.gameObject.GetComponent<PotionInformation>();
+
+            
+
+            //im missunderstaning this a bit in logic order 
+            // is it not ( set this value to = this value? )
+            customerRecivedPotionValue1 = PotionValue.IngridientSelected1.value;
+            customerRecivedPotionValue2 = PotionValue.IngridientSelected2.value;
+
+            //check what main potion ingridient is in the potion
+            if (customerRecivedPotionValue1 == 1)
+            {
+                //check waht secondary potion ingridient is in the potion
+                if (customerRecivedPotionValue2 == 2)
+                {
+                    return;
+                }
+            }
+
+
             //this should be moved elsewhere in regards to npc dialogue
             currentState = NPCBehaviour.LeavingShop;
 
