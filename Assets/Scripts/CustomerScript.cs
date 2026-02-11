@@ -80,16 +80,19 @@ public class CustomerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //if its a potion procced
-        if(other.gameObject.tag == "PotionProduct") 
+        if(other.tag == "PotionProduct") 
         {
-            PotionInformation PotionValue = other.gameObject.GetComponent<PotionInformation>();
+            Transform trans = other.transform; 
+            PotionInformation PotionValue = trans.GetComponent<PotionInformation>();
 
-            
+            int p = PotionValue.IngridentSelected1;
 
+
+            //note, fix spelling
             //im missunderstaning this a bit in logic order 
             // is it not ( set this value to = this value? )
-            customerRecivedPotionValue1 = PotionValue.IngridientSelected1.value;
-            customerRecivedPotionValue2 = PotionValue.IngridientSelected2.value;
+            customerRecivedPotionValue1 = PotionValue.IngridentSelected1;   //.IngridientSelected1;
+            customerRecivedPotionValue2 = PotionValue.IngridentSelected2;   //.IngridientSelected2;
 
             //check what main potion ingridient is in the potion
             if (customerRecivedPotionValue1 == 1)
