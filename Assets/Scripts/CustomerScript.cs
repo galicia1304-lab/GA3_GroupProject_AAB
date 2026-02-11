@@ -80,27 +80,31 @@ public class CustomerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //if its a potion procced
+        //refrence to other onyl needs to check for tag and not also gameobject
         if(other.tag == "PotionProduct") 
         {
             Transform trans = other.transform; 
             PotionInformation PotionValue = trans.GetComponent<PotionInformation>();
 
+            //for debugging
+            //also null refrence error here
             int p = PotionValue.IngridentSelected1;
 
+            //note, fixed spelling (thanks John)
+            //null refrence error in line below
+            customerRecivedPotionValue1 = PotionValue.IngridentSelected1;   
+            customerRecivedPotionValue2 = PotionValue.IngridentSelected2;
 
-            //note, fix spelling
-            //im missunderstaning this a bit in logic order 
-            // is it not ( set this value to = this value? )
-            customerRecivedPotionValue1 = PotionValue.IngridentSelected1;   //.IngridientSelected1;
-            customerRecivedPotionValue2 = PotionValue.IngridentSelected2;   //.IngridientSelected2;
+            Debug.Log(customerRecivedPotionValue1);
+            Debug.Log(customerRecivedPotionValue2);
 
             //check what main potion ingridient is in the potion
-            if (customerRecivedPotionValue1 == 1)
+            if (customerRecivedPotionValue1 == 2)
             {
                 //check waht secondary potion ingridient is in the potion
-                if (customerRecivedPotionValue2 == 2)
+                if (customerRecivedPotionValue2 == 0)
                 {
-                    return;
+                    Debug.Log("Customer wanted this potion");
                 }
             }
 
