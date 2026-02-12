@@ -25,7 +25,9 @@ public class CustomerScript : MonoBehaviour
     {
         EnteringShop,
         WatingInShop,
-        LeavingShop
+        LeavingShop,
+        UsingPotion,
+        Result
     }
 
     //what behaviour npc is exacuting.
@@ -84,46 +86,16 @@ public class CustomerScript : MonoBehaviour
         if(other.tag == "PotionProduct") 
         {
             Transform potion = other.transform; 
-            //PotionInformation PotionValue = trans.GetComponent<PotionInformation>();
-
-            //for debugging
-            //also null refrence error here
-            //int p = PotionValue.IngridentSelected1;
-
-            //note, fixed spelling (thanks John)
-            //null refrence error in line below
-            //customerRecivedPotionValue1 = PotionValue.IngridentSelected1;   
-            //customerRecivedPotionValue2 = PotionValue.IngridentSelected2;
-
-            //Debug.Log(customerRecivedPotionValue1);
-            //Debug.Log(customerRecivedPotionValue2);
-
-            //check what main potion ingridient is in the potion
-            
-            /* if (customerRecivedPotionValue1 == 2)
-            {
-                //check waht secondary potion ingridient is in the potion
-                if (customerRecivedPotionValue2 == 0)
-                {
-                    Debug.Log("Customer wanted this potion");
-                }
-            }
-            */
-
+           
             //this should be moved elsewhere in regards to npc dialogue
             currentState = NPCBehaviour.LeavingShop;
-
-            //here is the npc taking in the value of the potion which will affect the outcome of the narrative
-            //customerPotionValue = PotionValues.GetComponent<ReputationValues>().soldierReputation;
-            //Debug.Log("print here waht ingridient numbers are in the potion");
-
-            //object with tag is destroyd. creates illusion of npc reciving item (specifie gameobject othervise destroyed object is still visable)
-            //Destroy(other.gameObject);
 
            //give the potion as an object
            potion.parent = transform;  //give the actual potion to the NPC
            potion.position = Vector3.zero;
            potion.localPosition = Vector3.zero + Vector3.up * 2.0f;
+           potion.gameObject.SetActive(false);
+
            Debug.Log("Customer got Potion, should be hovering over head of npc");
         }
     }

@@ -56,7 +56,7 @@ public class PickupScript : MonoBehaviour
     void PickupObject(GameObject pickObj)
     {
         //before pickup up object check if the tag is PotionProduct, this is the only items that should be picked up
-        if (pickObj.tag == "PotionProduct")
+        if (pickObj.tag == "PotionProduct" && pickObj.activeSelf)
         {
             if (pickObj.GetComponent<Rigidbody>())
             {
