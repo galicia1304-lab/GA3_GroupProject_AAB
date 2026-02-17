@@ -19,6 +19,10 @@ public class UsePotion : MonoBehaviour
 
             Debug.Log("ingredients 1 = " + info.IngridentSelected1 + " and 2 = " + info.IngridentSelected2);
 
+            if (info.IngridentSelected1 == 3 & info.IngridentSelected2 == 1)
+            {
+                return;
+            }
         
         
         }

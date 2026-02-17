@@ -9,8 +9,8 @@ public class CustomerScript : MonoBehaviour
 
     //talk to John about this 
     //this is what value the customer gets from the potions they recive
-    int customerRecivedPotionValue1 = 0;
-    int customerRecivedPotionValue2 = 0;
+    //int customerRecivedPotionValue1 = 0;
+    //int customerRecivedPotionValue2 = 0;
 
     //refrence to navmesh agent
     private NavMeshAgent _agent;

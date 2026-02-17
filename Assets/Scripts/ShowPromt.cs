@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ShowPromt : MonoBehaviour
 {
     //This is for canvas with E promt (brewing table)
-    public Canvas EPromtCanvas;
+    public Canvas PromtCanvas;
 
     void OnTriggerEnter(Collider PlayerCapsule)
     {
@@ -16,7 +16,7 @@ public class ShowPromt : MonoBehaviour
         {
             Debug.Log("Player should get E promt now");
             //assigned canvas should now be visalbe
-            EPromtCanvas.enabled = true;
+            PromtCanvas.enabled = true;
         }
     }
 
@@ -25,7 +25,7 @@ public class ShowPromt : MonoBehaviour
         if (LeavingObject.tag == "Player")
         {
             Debug.Log("Player should not see E promt now");
-            EPromtCanvas.enabled = false;
+            PromtCanvas.enabled = false;
         }
     }
 }

@@ -22,7 +22,6 @@ public class IngridientImageScript : MonoBehaviour
     {
         if (IngridientDropdown.value == 0) //ingridient 1
         {
-
             ImageIngridient.sprite = Ingridient1;
         }
 
