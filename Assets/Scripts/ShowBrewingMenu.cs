@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class ShowBrewingMenu : MonoBehaviour
 {
     //existing canvases
-    public Canvas EPromtCanvas;
-    public Canvas BrewingMenuCanvas;
+    //public Canvas EPromtCanvas;
+    //public Canvas BrewingMenuCanvas;
+    public GameObject PromtObject;
+    public GameObject CanvasObject;
 
     //player controller refrence
     public CharacterController PlayerController;
@@ -21,10 +23,12 @@ public class ShowBrewingMenu : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 //show brewing Menu Canvas
-                BrewingMenuCanvas.enabled = true;
+                //BrewingMenuCanvas.enabled = true;
+                CanvasObject.SetActive(true);
 
                 //hide E promt
-                EPromtCanvas.enabled = false;
+                //EPromtCanvas.enabled = false;
+                PromtObject.SetActive(false);
 
                 //frezze the player controller
                 PlayerController.enabled = false;
@@ -45,8 +49,10 @@ public class ShowBrewingMenu : MonoBehaviour
     public void ExitButton()
     {
         Debug.Log("Exit button pressed");
-        BrewingMenuCanvas.enabled=false;
-        EPromtCanvas.enabled=true;
+        //BrewingMenuCanvas.enabled=false;
+        //EPromtCanvas.enabled=true;
+        PromtObject.SetActive(true);
+        CanvasObject.SetActive(false);
 
         //enable player controller
         PlayerController.enabled = true;
@@ -55,4 +61,13 @@ public class ShowBrewingMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    void DisableCanvas()
+    {
+        CanvasObject.SetActive(false);
+    }
+
+    void ActivateCanvas()
+    {
+        CanvasObject.SetActive(true);
+    }
 }
