@@ -566,8 +566,8 @@ MonoBehaviour:
   normalColor: {r: 0.9924528, g: 0.8568719, b: 0.7171875, a: 1}
   hoverColor: {r: 1, g: 1, b: 1, a: 1}
   clickColor: {r: 0.9019608, g: 0.6784314, b: 0.4392157, a: 1}
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: f44b7388dcf5dd14a981e85a3aa5a9f6, type: 3}
+  clickSound: {fileID: 8300000, guid: 4a09040e8e6916c4aae24278581e6b06, type: 3}
 --- !u!114 &1271747358
 MonoBehaviour:
   m_ObjectHideFlags: 0
