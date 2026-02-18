@@ -60,6 +60,7 @@ public class CustomerScript : MonoBehaviour
                 Debug.Log("Customer is entering the shop");
                 //speed in regards to deltatime is not needed since the nav mesh agent handles the speed (you can change it there)
                 _agent.SetDestination(Waypoints[0].transform.position);
+                _agent.isStopped = false;
                 break;
 
             // customer remains still waiting for the next step/state
@@ -71,6 +72,7 @@ public class CustomerScript : MonoBehaviour
             // customer got what they want and moves to waypoint awayfrom the player. 
             case NPCBehaviour.LeavingShop:
                 _agent.SetDestination(Waypoints[1].transform.position);
+                _agent.isStopped = false;
                 Debug.Log("Customer is leaving the shop");
                 break;
 
@@ -78,6 +80,11 @@ public class CustomerScript : MonoBehaviour
             case NPCBehaviour.Inactive:
 
                 break;
+        }
+
+        if(_agent.remainingDistance < 2.0)
+        {
+            _agent.isStopped = true;
         }
         
     }
