@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PotionProduct
+  - 1stWaypoint
   layers:
   - Default
   - TransparentFX

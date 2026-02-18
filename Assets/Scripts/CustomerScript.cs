@@ -26,12 +26,12 @@ public class CustomerScript : MonoBehaviour
         EnteringShop,
         WatingInShop,
         LeavingShop,
-        UsingPotion,
-        Result
+        Inactive
     }
 
     //what behaviour npc is exacuting.
     [SerializeField] private NPCBehaviour currentState;
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,8 +52,6 @@ public class CustomerScript : MonoBehaviour
     void Update()
     {
         //set destination, this is designated in inspector
-        
-
         switch (currentState)
         {
             // npc begins in this state
@@ -66,6 +64,7 @@ public class CustomerScript : MonoBehaviour
 
             // customer remains still waiting for the next step/state
             case NPCBehaviour.WatingInShop:
+                //need code that prevents the NavMeshAgent fromt jittering in place         
                 Debug.Log("Customer wating for potion");
                 break;
 
@@ -73,6 +72,11 @@ public class CustomerScript : MonoBehaviour
             case NPCBehaviour.LeavingShop:
                 _agent.SetDestination(Waypoints[1].transform.position);
                 Debug.Log("Customer is leaving the shop");
+                break;
+
+            //Npc is not needed anymore and becomes inactive
+            case NPCBehaviour.Inactive:
+
                 break;
         }
         
@@ -82,7 +86,7 @@ public class CustomerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //if its a potion procced
-        //refrence to other onyl needs to check for tag and not also gameobject
+        //refrence to other only needs to check for tag and not also gameobject
         if(other.tag == "PotionProduct") 
         {
             Transform potion = other.transform; 
@@ -98,6 +102,13 @@ public class CustomerScript : MonoBehaviour
 
            Debug.Log("Customer got Potion, should be hovering over head of npc");
         }
+
+        else if (other.tag == "1stWaypoint")
+        {
+            currentState = NPCBehaviour.WatingInShop;
+            Debug.Log("Customer will now wait in the shop");
+        }
+
     }
 
 }
