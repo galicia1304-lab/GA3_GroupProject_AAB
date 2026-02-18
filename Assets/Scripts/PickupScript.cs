@@ -18,7 +18,7 @@ public class PickupScript : MonoBehaviour
     private void Update()
     {
         //mouse being held down to pickup object
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             if(heldObj == null)
             {
