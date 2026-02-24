@@ -61,13 +61,4 @@ public class ShowBrewingMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void DisableCanvas()
-    {
-        CanvasObject.SetActive(false);
-    }
-
-    void ActivateCanvas()
-    {
-        CanvasObject.SetActive(true);
-    }
 }
