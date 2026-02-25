@@ -50,7 +50,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3075023599197280196}
   cacheVersion: 131849
-  cacheTime: 639076314847338647
+  cacheTime: 639076318734534786
   SerializableEventsDict:
   - key: event:/FirstEvent
     index: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076314847338647
+  lastModified: 639076318734534786
   FileSizes:
   - Name: Desktop
     Value: 772
@@ -89,7 +89,7 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076314847313428
+  lastModified: 639076318734524786
   FileSizes:
   - Name: Desktop
     Value: 433952
