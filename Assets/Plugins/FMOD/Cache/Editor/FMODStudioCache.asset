@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 33054
+--- !u!114 &-628946211853829940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/nature-ambience-audio
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/nature-ambience-audio
+  Guid:
+    Data1: 960472871
+    Data2: 1273035580
+    Data3: -185781629
+    Data4: -185690624
+  Banks:
+  - {fileID: 5561035576536413331}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 593031
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,16 +71,19 @@ MonoBehaviour:
   - {fileID: 5561035576536413331}
   EditorEvents:
   - {fileID: -5319573992542646016}
+  - {fileID: -628946211853829940}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5561035576536413331}
   StringsBanks:
   - {fileID: 3075023599197280196}
   cacheVersion: 131849
-  cacheTime: 639076318734534786
+  cacheTime: 639076372014471714
   SerializableEventsDict:
   - key: event:/FirstEvent
     index: 0
+  - key: event:/nature-ambience-audio
+    index: 1
 --- !u!114 &3075023599197280196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +99,10 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076318734534786
+  lastModified: 639076372014471714
   FileSizes:
   - Name: Desktop
-    Value: 772
+    Value: 836
   Exists: 1
 --- !u!114 &5561035576536413331
 MonoBehaviour:
@@ -89,8 +119,8 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076318734524786
+  lastModified: 639076372014461671
   FileSizes:
   - Name: Desktop
-    Value: 433952
+    Value: 7868992
   Exists: 1
