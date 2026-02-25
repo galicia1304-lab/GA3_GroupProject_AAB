@@ -44,7 +44,6 @@ public class CustomerScript : MonoBehaviour
             Debug.LogError("Nav mesh agent is null");
         }
         //set what state script begins in
-        currentState = NPCBehaviour.EnteringShop;
     }
 
     // Update is called once per frame
@@ -82,13 +81,16 @@ public class CustomerScript : MonoBehaviour
                 break;
         }
 
-        if(_agent.remainingDistance < 2.0)
+        //npc should top if their distance to waypaint is less than 2
+        if (_agent.remainingDistance < 2.0)
         {
             _agent.isStopped = true;
         }
         
     }
 
+
+    //thanks to John for helping with transfering the potion information to the npc
     //ontrigger checking for potion that customer requested
     private void OnTriggerEnter(Collider other)
     {

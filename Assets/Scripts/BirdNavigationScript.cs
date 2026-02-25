@@ -51,11 +51,10 @@ public class BirdNavigationScript : MonoBehaviour
                 break;
         }
 
+        //npc should top if their distance to waypaint is less than 2
         if (_agent.remainingDistance < 2.0)
         {
             _agent.isStopped = true;
         }
-
-
     }
 }

@@ -9,6 +9,7 @@ public class conversationStarter : MonoBehaviour
     //only allow the conversastion to be initiated once
     bool willingToTalk = true;
 
+    //change this
     private void OnTriggerStay(Collider other)
     {
         //do not start conversastion if it has already played
