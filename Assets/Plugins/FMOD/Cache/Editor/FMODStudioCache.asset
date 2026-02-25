@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 33054
+--- !u!114 &-1985027361980662775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soundreality-fire-effect-367659
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/soundreality-fire-effect-367659
+  Guid:
+    Data1: 1702953879
+    Data2: 1074911561
+    Data3: 1015261105
+    Data4: -440028949
+  Banks:
+  - {fileID: 5561035576536413331}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 36024
 --- !u!114 &-628946211853829940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,13 +101,14 @@ MonoBehaviour:
   - {fileID: -628946211853829940}
   - {fileID: 5372128116786896552}
   - {fileID: 6032292947438362668}
+  - {fileID: -1985027361980662775}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5561035576536413331}
   StringsBanks:
   - {fileID: 3075023599197280196}
   cacheVersion: 131849
-  cacheTime: 639076406425555439
+  cacheTime: 639076418348435886
   SerializableEventsDict:
   - key: event:/FirstEvent
     index: 0
@@ -90,6 +118,8 @@ MonoBehaviour:
     index: 2
   - key: event:/horizons-medieval_Audio
     index: 3
+  - key: event:/soundreality-fire-effect-367659
+    index: 4
 --- !u!114 &3075023599197280196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,10 +135,10 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076406425555439
+  lastModified: 639076418348435886
   FileSizes:
   - Name: Desktop
-    Value: 940
+    Value: 1002
   Exists: 1
 --- !u!114 &5372128116786896552
 MonoBehaviour:
@@ -152,10 +182,10 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076406425545486
+  lastModified: 639076418348425838
   FileSizes:
   - Name: Desktop
-    Value: 19230176
+    Value: 20008832
   Exists: 1
 --- !u!114 &6032292947438362668
 MonoBehaviour:

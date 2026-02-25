@@ -7,6 +7,7 @@ TagManager:
   - PotionProduct
   - 1stWaypoint
   - Trigger
+  - TriggerFire
   layers:
   - Default
   - TransparentFX
