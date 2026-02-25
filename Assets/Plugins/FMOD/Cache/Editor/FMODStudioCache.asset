@@ -72,18 +72,24 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -5319573992542646016}
   - {fileID: -628946211853829940}
+  - {fileID: 5372128116786896552}
+  - {fileID: 6032292947438362668}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5561035576536413331}
   StringsBanks:
   - {fileID: 3075023599197280196}
   cacheVersion: 131849
-  cacheTime: 639076372014471714
+  cacheTime: 639076406425555439
   SerializableEventsDict:
   - key: event:/FirstEvent
     index: 0
   - key: event:/nature-ambience-audio
     index: 1
+  - key: event:/BusyTownSquare_Audio
+    index: 2
+  - key: event:/horizons-medieval_Audio
+    index: 3
 --- !u!114 &3075023599197280196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,11 +105,38 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076372014471714
+  lastModified: 639076406425555439
   FileSizes:
   - Name: Desktop
-    Value: 836
+    Value: 940
   Exists: 1
+--- !u!114 &5372128116786896552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BusyTownSquare_Audio
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BusyTownSquare_Audio
+  Guid:
+    Data1: -480150812
+    Data2: 1227937056
+    Data3: -179572
+    Data4: -412030806
+  Banks:
+  - {fileID: 5561035576536413331}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 766680
 --- !u!114 &5561035576536413331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,8 +152,35 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076372014461671
+  lastModified: 639076406425545486
   FileSizes:
   - Name: Desktop
-    Value: 7868992
+    Value: 19230176
   Exists: 1
+--- !u!114 &6032292947438362668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/horizons-medieval_Audio
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/horizons-medieval_Audio
+  Guid:
+    Data1: -425428882
+    Data2: 1287752464
+    Data3: 1003516065
+    Data4: -1127750349
+  Banks:
+  - {fileID: 5561035576536413331}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 127947

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{7ca9e3a7-fab4-451d-8f6b-9f212f54478a}">
+		<property name="assetPath">
+			<value>horizons-medieval_Audio.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>127.94775510204082</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{52f26dd7-f2f0-466c-b100-4bc26170806f}</destination>
+		</relationship>
+	</object>
+</objects>
