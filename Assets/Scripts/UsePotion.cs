@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UsePotion : MonoBehaviour
 {
+    //these are set to true/false on the npc itself so they can recive the potions
     [SerializeField] bool SoldierMissingPotion = true;
     [SerializeField] bool ChruchMissingPotion = true;
 

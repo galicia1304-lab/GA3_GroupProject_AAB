@@ -9,5 +9,15 @@ public class ReputationValues : MonoBehaviour
     //only allow player to end day if both soldier and church have gotten their potion and given feedback.
     public bool CanEndDay = false;
 
+
+    public void SoldierRepIncrease()
+    {
+        soldierReputation += 1;
+    }
+
+    public void ChurchRepIncrease()
+    {
+        churchReputation += 1;
+    } 
 }
 
