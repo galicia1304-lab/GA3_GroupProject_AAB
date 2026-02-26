@@ -8,6 +8,8 @@ TagManager:
   - 1stWaypoint
   - Trigger
   - TriggerFire
+  - BirdDelivery
+  - DeliverdLetter
   layers:
   - Default
   - TransparentFX

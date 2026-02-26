@@ -5,6 +5,7 @@ public class BirdNavigationScript : MonoBehaviour
 {
     //this scrip copies from customer script
 
+    public GameObject CanvasFeedbackLetter;
 
     private NavMeshAgent _agent;
     [SerializeField] public Transform[] Waypoints;
@@ -51,10 +52,23 @@ public class BirdNavigationScript : MonoBehaviour
                 break;
         }
 
-        //npc should top if their distance to waypaint is less than 2
+        //npc should stop if their distance to waypaint is less than 2
         if (_agent.remainingDistance < 2.0)
         {
             _agent.isStopped = true;
+        }
+
+    }
+
+    //cheking for the lette delivery
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "DeliverdLetter")
+        {
+
+
+            //move back after delivering letter.
+            currentState = NPCBehaviour.ExitingShop;
         }
     }
 }

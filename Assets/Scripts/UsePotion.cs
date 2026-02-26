@@ -14,6 +14,10 @@ public class UsePotion : MonoBehaviour
     int ChurchWantingIngridient1 = 6;
     int ChurchWantingIngridient2 = 6;
 
+    //this is for what letter the bird delivers based on waht potion the npc got
+    public bool SoldierCorrectPotion = false;
+    public bool ChurchCorrectPotion = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +38,7 @@ public class UsePotion : MonoBehaviour
                 {
                     //increase rep value of soldier in "reputationValues" scipt
                     Debug.Log("soldier rep +");
+                    SoldierCorrectPotion = true;
                 }
 
             }
@@ -47,9 +52,13 @@ public class UsePotion : MonoBehaviour
                 {
                     //increase rep value of church in "reputationValues" scipt
                     Debug.Log("church rep +");
+                    ChurchCorrectPotion = true;
                 }
 
             }
+
+            //regardless of above send the bird to deliver its letter
+            Debug.Log("Bird will arrive after delay.");
         }
     }
 }

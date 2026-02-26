@@ -19,5 +19,7 @@ public class ReputationValues : MonoBehaviour
     {
         churchReputation += 1;
     } 
+
+
 }
 
