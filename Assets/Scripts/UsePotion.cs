@@ -21,9 +21,10 @@ public class UsePotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.childCount > 0)
+        //do not do it this way ,this is stupid
+        if (transform.childCount > 1)
         {
-            Transform potion = transform.GetChild(0);
+            Transform potion = transform.GetChild(1);
 
             PotionInformation info = potion.GetComponent<PotionInformation>();
 
