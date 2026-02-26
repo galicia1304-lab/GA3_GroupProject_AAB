@@ -65,10 +65,12 @@ public class BirdNavigationScript : MonoBehaviour
     {
         if (other.tag == "DeliverdLetter")
         {
-
+            //change info of deliverd letter 
 
             //move back after delivering letter.
             currentState = NPCBehaviour.ExitingShop;
+
+            Debug.Log("bird intends to leave shop");
         }
     }
 }

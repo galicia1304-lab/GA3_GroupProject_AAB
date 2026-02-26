@@ -15,14 +15,16 @@ public class FeedbackLetterScript : MonoBehaviour
     //what feedback letter is to be showed
     [SerializeField] public int PageResponse = 0;
 
-    void OnTriggerStay(Collider PLayerInside)
+    void OnTriggerEnter(Collider other)
     {
-        if (PLayerInside.tag == "BirdDelivery")
+        if (other.tag == "BirdDelivery")
         {
             //become active?
 
             //set what letter is to be shown
             PageResponse = 0;
+
+            Debug.Log("letter touched by bird");
         }
     }
 
