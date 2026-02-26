@@ -66,6 +66,10 @@ public class BirdNavigationScript : MonoBehaviour
         if (other.tag == "DeliverdLetter")
         {
             //change info of deliverd letter 
+            //set info of "page response" to letter 
+            // 0 = soldier good 1 = soldier bad
+            // 2 = church good 3 = church bad
+            
 
             //move back after delivering letter.
             currentState = NPCBehaviour.ExitingShop;

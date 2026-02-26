@@ -59,6 +59,9 @@ public class UsePotion : MonoBehaviour
 
             //regardless of above send the bird to deliver its letter
             Debug.Log("Bird will arrive after delay.");
+
         }
     }
+
+    //create public voids here that can be called upon from the dialouge with the npc
 }

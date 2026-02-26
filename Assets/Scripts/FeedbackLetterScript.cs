@@ -22,7 +22,7 @@ public class FeedbackLetterScript : MonoBehaviour
             //become active?
 
             //set what letter is to be shown
-            PageResponse = 0;
+            PageResponse = 3;
 
             Debug.Log("letter touched by bird");
         }
