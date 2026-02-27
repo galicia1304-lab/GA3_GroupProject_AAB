@@ -162,6 +162,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 593031
+--- !u!114 &-292190774190138584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/clavier-music-soft-and-sad-piano-music-259949
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/clavier-music-soft-and-sad-piano-music-259949
+  Guid:
+    Data1: -2134899557
+    Data2: 1312739708
+    Data3: 541601666
+    Data4: 1230624474
+  Banks:
+  - {fileID: 7344488437785873964}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 245400
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,13 +210,14 @@ MonoBehaviour:
   - {fileID: -3589667012304306920}
   - {fileID: 8578126212359052558}
   - {fileID: -6016618667728615551}
+  - {fileID: -292190774190138584}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7344488437785873964}
   StringsBanks:
   - {fileID: 7921130363429266240}
   cacheVersion: 131849
-  cacheTime: 639076422992526466
+  cacheTime: 639078038866292049
   SerializableEventsDict:
   - key: event:/nature-ambience-audio
     index: 0
@@ -201,6 +229,8 @@ MonoBehaviour:
     index: 3
   - key: event:/FirstEvent
     index: 4
+  - key: event:/clavier-music-soft-and-sad-piano-music-259949
+    index: 5
 --- !u!114 &1716545124779603241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,10 +367,10 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076422992521429
+  lastModified: 639078038866271996
   FileSizes:
   - Name: Desktop
-    Value: 20008832
+    Value: 23168512
   Exists: 1
 --- !u!114 &7921130363429266240
 MonoBehaviour:
@@ -357,10 +387,10 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076422992526466
+  lastModified: 639078038866292049
   FileSizes:
   - Name: Desktop
-    Value: 1002
+    Value: 1078
   Exists: 1
 --- !u!114 &8578126212359052558
 MonoBehaviour:

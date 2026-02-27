@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{2a4a6746-49fc-461f-ad5d-5f295b5ac927}">
+		<property name="assetPath">
+			<value>clavier-music-soft-and-sad-piano-music-259949.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>245.40000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{52f26dd7-f2f0-466c-b100-4bc26170806f}</destination>
+		</relationship>
+	</object>
+</objects>

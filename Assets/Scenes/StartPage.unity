@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65beab1097e530e40bbf1c8847b87178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButton
-  sceneToLoad: PotionGame
+  sceneToLoad: IntroScenePotionGame
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.8792453, g: 0.569021, b: 0.569021, a: 1}
   clickColor: {r: 0.5622641, g: 0.4352162, b: 0.3002278, a: 1}
