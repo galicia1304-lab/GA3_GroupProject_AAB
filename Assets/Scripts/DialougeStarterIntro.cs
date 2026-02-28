@@ -23,7 +23,7 @@ public class DialougeStarterIntro : MonoBehaviour
         Debug.Log("scene start with conversastion");
     }
 
-    //load specififc scene on event
+    //load specifiied scene on event
     public void LoadScene()
     {
         SceneManager.LoadScene(sceneToLoad);

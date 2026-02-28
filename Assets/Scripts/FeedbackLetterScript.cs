@@ -19,10 +19,10 @@ public class FeedbackLetterScript : MonoBehaviour
     {
         if (other.tag == "BirdDelivery")
         {
-            //become active?
+            //set other collider box active
 
             //set what letter is to be shown
-            PageResponse = 3;
+            //PageResponse = 3;
 
             Debug.Log("letter touched by bird");
         }
@@ -51,5 +51,29 @@ public class FeedbackLetterScript : MonoBehaviour
         {
             LetterImage.sprite = ChurchFeedbackBad;
         }
+    }
+
+    public void GoodSoldierFeedback()
+    {
+        //set pageresponse value
+        PageResponse = 0;
+    }
+
+    public void BadSoldierFeedback()
+    {
+        //set pageresponse value
+        PageResponse = 1;
+    }
+
+    public void GoodChurchFeedback()
+    {
+        //set pageresponse value
+        PageResponse = 2;
+    }
+
+    public void BadChurchFeedback()
+    {
+        //set pageresponse value
+        PageResponse = 3;
     }
 }

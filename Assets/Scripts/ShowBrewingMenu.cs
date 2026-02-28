@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class ShowBrewingMenu : MonoBehaviour
 {
     //existing canvases
-    //public Canvas EPromtCanvas;
-    //public Canvas BrewingMenuCanvas;
+    //promt canvas
+    //main canvas to be shown
     public GameObject PromtObject;
     public GameObject CanvasObject;
 

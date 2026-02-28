@@ -49,4 +49,6 @@ public class PageSelectScript : MonoBehaviour
             ImagePage.sprite = Page5;
         }
     }
+
+
 }

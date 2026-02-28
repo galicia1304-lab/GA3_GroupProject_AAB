@@ -77,4 +77,10 @@ public class BirdNavigationScript : MonoBehaviour
             Debug.Log("bird intends to leave shop");
         }
     }
+
+    //customer script calls on this to deliver the letter
+    public void BirdArriving()
+    {
+        currentState = NPCBehaviour.DeliveringLetter;
+    }
 }

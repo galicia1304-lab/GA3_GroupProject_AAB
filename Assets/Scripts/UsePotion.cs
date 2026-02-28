@@ -64,5 +64,19 @@ public class UsePotion : MonoBehaviour
         }
     }
 
-    //create public voids here that can be called upon from the dialouge with the npc
+    //public voids here that can are called in dialouge to decide what potion npc want
+    //this is kinda stupid way to do it but it gives resaults
+    public void SetSoldierPotionCourage()
+    {
+        SoldierWantingIngridient1 = 0;
+        SoldierWantingIngridient2 = 0;
+    }
+
+
+    public void SetChurchPotionSomething()
+    {
+        ChurchWantingIngridient1 = 0;
+        ChurchWantingIngridient2 = 0;
+    }
+
 }
