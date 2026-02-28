@@ -61,7 +61,8 @@ public class CustomerScript : MonoBehaviour
                 _agent.SetDestination(Waypoints[0].transform.position);
                 _agent.isStopped = false;
                 break;
-
+            
+                //this is not used ohwell
             // customer remains still waiting for the next step/state
             case NPCBehaviour.WatingInShop:
                 //need code that prevents the NavMeshAgent fromt jittering in place         
@@ -75,6 +76,7 @@ public class CustomerScript : MonoBehaviour
                 Debug.Log("Customer is leaving the shop");
                 break;
 
+                //this is not used ohwell
             //Npc is not needed anymore and becomes inactive
             case NPCBehaviour.Inactive:
 
