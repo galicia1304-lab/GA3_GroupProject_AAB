@@ -204,7 +204,7 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639080690796852480
+  lastModified: 639080655937618390
   FileSizes:
   - Name: Desktop
     Value: 1280
@@ -240,7 +240,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1664229537029355453}
   cacheVersion: 131849
-  cacheTime: 639080690796852480
+  cacheTime: 639080655937618390
   SerializableEventsDict:
   - key: event:/nature-ambience-audio
     index: 0
@@ -258,6 +258,8 @@ MonoBehaviour:
     index: 6
   - key: event:/creatorshome-turn-a-page-336933
     index: 7
+  - key: event:/kakaist-crow-sfx-318131
+    index: 8
 --- !u!114 &2266659067618864462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +329,7 @@ MonoBehaviour:
   Path: fmodproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639080690796833399
+  lastModified: 639080655937385514
   FileSizes:
   - Name: Desktop
     Value: 23306272
