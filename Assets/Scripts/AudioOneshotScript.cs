@@ -9,6 +9,8 @@ public class AudioOneshotScript : MonoBehaviour
     //sreialized field to hold audio
     [SerializeField] private EventReference PLayThisSoundHere;
 
+    [SerializeField] private Transform ObjectLocation;
+
 
     //public void to play sound oneshot at world posistion
     public void PlayOneShot(EventReference sound, Vector3 worldpos)
@@ -19,6 +21,6 @@ public class AudioOneshotScript : MonoBehaviour
     //sound will be played based on serialized field
     public void PLaySoundHere()
     {
-        AudioOneshotScript.instance.PlayOneShot(PLayThisSoundHere, this.transform.position);
+        AudioOneshotScript.instance.PlayOneShot(PLayThisSoundHere, ObjectLocation.transform.position);
     }
 }

@@ -11,6 +11,7 @@ public class UsePotion : MonoBehaviour
     int SoldierWantingIngridient1 = 6;
     int SoldierWantingIngridient2 = 6;
 
+    // [NOT USED]
     int ChurchWantingIngridient1 = 6;
     int ChurchWantingIngridient2 = 6;
 
@@ -44,6 +45,8 @@ public class UsePotion : MonoBehaviour
 
             }
 
+            // [NOT USED]
+            //this is only used if priest wants a potion (in the current version it doesnt)
             //this check will only work once
             if (ChruchMissingPotion == true)
             {
@@ -66,17 +69,21 @@ public class UsePotion : MonoBehaviour
 
     //public voids here that can are called in dialouge to decide what potion npc want
     //this is kinda stupid way to do it but it gives resaults
-    public void SetSoldierPotionCourage()
+    public void SetSoldierPotionSleep()
     {
-        SoldierWantingIngridient1 = 0;
+        SoldierWantingIngridient1 = 2;
+        SoldierWantingIngridient2 = 2;
+    }
+
+    public void SetSoldierPotionTranquility()
+    {
+        SoldierWantingIngridient1 = 1;
+        SoldierWantingIngridient2 = 1;
+    }
+
+    public void SetSoldierPotionHealing()
+    {
+        SoldierWantingIngridient1 = 1;
         SoldierWantingIngridient2 = 0;
     }
-
-
-    public void SetChurchPotionSomething()
-    {
-        ChurchWantingIngridient1 = 0;
-        ChurchWantingIngridient2 = 0;
-    }
-
 }

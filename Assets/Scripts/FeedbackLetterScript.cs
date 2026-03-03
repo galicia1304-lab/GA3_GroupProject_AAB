@@ -9,8 +9,6 @@ public class FeedbackLetterScript : MonoBehaviour
 
     public Sprite SoldierFeedbackGood;
     public Sprite SoldierFeedbackBad;
-    public Sprite ChurchFeedbackGood;
-    public Sprite ChurchFeedbackBad;
 
     //what feedback letter is to be showed
     [SerializeField] public int PageResponse = 0;
@@ -42,14 +40,9 @@ public class FeedbackLetterScript : MonoBehaviour
             LetterImage.sprite = SoldierFeedbackBad;
         }
 
-        else if (PageResponse == 2)
+        else
         {
-            LetterImage.sprite = ChurchFeedbackGood;
-        }
-
-        else if (PageResponse == 3)
-        {
-            LetterImage.sprite = ChurchFeedbackBad;
+            return; 
         }
     }
 
@@ -65,15 +58,4 @@ public class FeedbackLetterScript : MonoBehaviour
         PageResponse = 1;
     }
 
-    public void GoodChurchFeedback()
-    {
-        //set pageresponse value
-        PageResponse = 2;
-    }
-
-    public void BadChurchFeedback()
-    {
-        //set pageresponse value
-        PageResponse = 3;
-    }
 }
