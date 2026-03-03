@@ -1,9 +1,16 @@
+using DialogueEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
 public class ReputationValues : MonoBehaviour
 {
+    [SerializeField] private NPCConversation PriestConvo1;
+    [SerializeField] private NPCConversation PriestConvo2;
+
+    //eugh??
+    public string PriestConversastion;
+
     //this script is to hold value of reputation, this will change the priset dialouge.
     public int soldierReputation = 0;
  
@@ -18,6 +25,13 @@ public class ReputationValues : MonoBehaviour
     public void SoldierRepIncrease()
     {
         soldierReputation += 1;
+    }
+
+
+    public void setPriestConversasstion()
+    {
+        if (soldierReputation == 0) 
+        { return; }
     }
 
 
