@@ -33,14 +33,17 @@ public class EndingDialogueStarter : MonoBehaviour
     //other scripts call on this to set what ending is to play
     public void SetEndingTo1()
     {
+        //loyalty ending
         EndingVariable = 1;
     }
     public void SetEndingTo2()
     {
+        //refusal
         EndingVariable = 2;
     }
     public void SetEndingTo3()
     {
+        //freedom
         EndingVariable = 3;
     }
 

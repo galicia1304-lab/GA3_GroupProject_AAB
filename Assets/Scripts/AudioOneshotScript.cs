@@ -9,14 +9,6 @@ public class AudioOneshotScript : MonoBehaviour
     //sreialized field to hold audio
     [SerializeField] private EventReference PLayThisSoundHere;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            Debug.Log("there shouldnt be more than 1 audioOneshot in this scene");
-        }
-        instance = this;
-    }
 
     //public void to play sound oneshot at world posistion
     public void PlayOneShot(EventReference sound, Vector3 worldpos)
