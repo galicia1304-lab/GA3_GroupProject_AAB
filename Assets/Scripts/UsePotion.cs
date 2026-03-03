@@ -16,6 +16,7 @@ public class UsePotion : MonoBehaviour
     int ChurchWantingIngridient2 = 6;
 
     //this is for what letter the bird delivers based on waht potion the npc got
+    //this must be public for other scripts to read
     public bool SoldierCorrectPotion = false;
     public bool ChurchCorrectPotion = false;
 
@@ -38,9 +39,15 @@ public class UsePotion : MonoBehaviour
 
                 if (info.IngridentSelected1 == SoldierWantingIngridient1 & info.IngridentSelected2 == SoldierWantingIngridient2)
                 {
-                    //increase rep value of soldier in "reputationValues" scipt
+                    //increase rep value of soldier in priest coonversastion scipt
                     Debug.Log("soldier rep +");
                     SoldierCorrectPotion = true;
+                }
+
+                else
+                {
+                    //this is for the priest conversastion
+                    SoldierCorrectPotion = false;
                 }
 
             }

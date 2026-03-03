@@ -7,7 +7,7 @@ public class EndingImageScript : MonoBehaviour
 
     public Image ImageEnding; //this is the image that holds the sprites
 
-    public int EndingValueImg = 1;
+    public int EndingValueImg = 0;
 
 
     //this holds the diffrent images fo display
@@ -16,6 +16,12 @@ public class EndingImageScript : MonoBehaviour
     public Sprite Ending3;
 
     //this could maybe be void start instead of update
+
+    private void Start()
+    {
+        EndingValueImg = ReputationValues.EndingValue;
+    }
+
     void Update()
     {
         if (EndingValueImg == 1)

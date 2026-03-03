@@ -5,34 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ReputationValues : MonoBehaviour
 {
-    [SerializeField] private NPCConversation PriestConvo1;
-    [SerializeField] private NPCConversation PriestConvo2;
-
-    //eugh??
-    public string PriestConversastion;
-
-    //this script is to hold value of reputation, this will change the priset dialouge.
-    public int soldierReputation = 0;
- 
-
     //this is what sets what ending plays in the ending scene
-    public int EndingValue = 1;
+    public static int EndingValue = 1;
 
     //what scene should be loaded 
     [Header("Scene")]
     public string sceneToLoad;
-
-    public void SoldierRepIncrease()
-    {
-        soldierReputation += 1;
-    }
-
-
-    public void setPriestConversasstion()
-    {
-        if (soldierReputation == 0) 
-        { return; }
-    }
 
 
     //obidience ending
@@ -43,6 +21,7 @@ public class ReputationValues : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
 
+    //exacution ending
     public void ending2()
     {
         EndingValue = 2;
@@ -50,6 +29,7 @@ public class ReputationValues : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
 
+    //freedom ending
     public void ending3()
     {
         EndingValue = 3;

@@ -14,5 +14,5 @@ public class AudioOneshotScript : MonoBehaviour
     public void PLaySoundHere()
     {
        AudioOneshotManager.Instance.PlaySoundOneshot(PLayThisSoundHere, this.transform.position);
-    }
+    } 
 }

@@ -14,6 +14,8 @@ public class EndingDialogueStarter : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        EndingVariable = ReputationValues.EndingValue;
+
         if (EndingVariable == 1)
         {
             ConversationManager.Instance.StartConversation(Ending1);
@@ -51,5 +53,13 @@ public class EndingDialogueStarter : MonoBehaviour
     public void ENDGAME()
     {
         Application.Quit();
+
+        
+#if UNITY_EDITOR
+        //this code only exists in the editor and ignored in the build
+
+        //quit game in editor
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
