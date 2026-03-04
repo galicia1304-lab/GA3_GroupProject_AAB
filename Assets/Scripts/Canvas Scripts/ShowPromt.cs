@@ -10,15 +10,33 @@ public class ShowPromt : MonoBehaviour
     //public Canvas PromtCanvas;
     public GameObject PromtObject;
 
+    //these are for hiding the E promt with "conversastion starter" script
+    public bool HideForConversastion = false;
+    private bool DontShowPromtAgain = true; 
+
     void OnTriggerEnter(Collider PlayerCapsule)
     {
         //player charachter mus have the tag "player" for this to work
         if (PlayerCapsule.tag == "Player")
         {
-            Debug.Log("Player should get E promt now");
-            //assigned canvas should now be visalbe
-            //PromtCanvas.enabled = true;
-            PromtObject.SetActive(true);
+            if (HideForConversastion == false)
+            {
+                Debug.Log("Player should get E promt now");
+                //assigned canvas should now be visalbe
+                //PromtCanvas.enabled = true;
+                PromtObject.SetActive(true);
+            }
+
+            else if (HideForConversastion == true)
+            {
+                if (DontShowPromtAgain == true)
+                {
+                    Debug.Log("Player should get E promt now");
+                    //assigned canvas should now be visalbe
+                    //PromtCanvas.enabled = true;
+                    PromtObject.SetActive(true);
+                }
+            }
         }
     }
 
@@ -30,5 +48,10 @@ public class ShowPromt : MonoBehaviour
             //PromtCanvas.enabled = false;
             PromtObject.SetActive(false);
         }
+    }
+
+    public void DisableConvoPromt()
+    {
+        DontShowPromtAgain = false;
     }
 }

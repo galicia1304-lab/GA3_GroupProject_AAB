@@ -109,7 +109,7 @@ public class CustomerScript : MonoBehaviour
         {
             Transform potion = other.transform;
 
-            //if npc is preist ignore this
+            //if npc is priest ignore this
             if (IsNpcSoldier == true)
             {
                 //soldier npc will move away

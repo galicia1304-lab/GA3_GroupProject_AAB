@@ -13,6 +13,9 @@ public class conversationStarterPriest : MonoBehaviour
     //bool that decides which conversastion will play (soldier "use potion" script will be able to change this)
     public bool CorrectPotionConversastion = false;
 
+    //E promt game object
+    public GameObject PromtObject;
+
     //refrence to script
     [Header("script refrence")]
     public UsePotion SoldierPotionOutcome;
@@ -30,6 +33,9 @@ public class conversationStarterPriest : MonoBehaviour
                 //check for input key E
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    //hide E promt
+                    //EPromtCanvas.enabled = false;
+                    PromtObject.SetActive(false);
 
                     Debug.Log("this is the bool of the script: " + SoldierPotionOutcome);
                     if (SoldierPotionOutcome.SoldierCorrectPotion == true)
