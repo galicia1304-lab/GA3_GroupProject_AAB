@@ -91,6 +91,12 @@ public class CustomerScript : MonoBehaviour
         
     }
 
+    //this is for the npc prist to enter the shop
+    public void EnterShopPriest()
+    {
+        currentState = NPCBehaviour.EnteringShop;
+    }
+
 
     //thanks to John for helping with transfering the potion information to the npc
     //ontrigger checking for potion that customer requested

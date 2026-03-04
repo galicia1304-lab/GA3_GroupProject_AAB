@@ -12,6 +12,7 @@ public class FeedbackLetterScript : MonoBehaviour
     public Sprite SoldierFeedbackGood;
     public Sprite SoldierFeedbackBad;
 
+    public GameObject LetterObject;
 
     //refrence to script
     [Header("script refrence")]
@@ -22,10 +23,9 @@ public class FeedbackLetterScript : MonoBehaviour
     {
         if (other.tag == "BirdDelivery")
         {
-            //set other collider box active
 
-            //set what letter is to be shown
-            //PageResponse = 3;
+            //set the letter gameobject active
+            LetterObject.SetActive(true);
 
             Debug.Log("letter touched by bird");
         }
