@@ -49,6 +49,11 @@ public class FeedbackLetterScript : MonoBehaviour
         }
     }
 
+    //event with samll delay so canvas doesnt get stuck on player screen
+    public void hideLetter()
+    {
+        LetterObject.SetActive(false);
+    }
 
 
 }

@@ -20,6 +20,9 @@ public class UsePotion : MonoBehaviour
     public bool SoldierCorrectPotion = false;
     public bool ChurchCorrectPotion = false;
 
+    //get refrence to bird script to change the npc state
+    public BirdNavigationScript BirdScriptRefrence;
+
     // Update is called once per frame
     void Update()
     {
@@ -50,6 +53,10 @@ public class UsePotion : MonoBehaviour
                     SoldierCorrectPotion = false;
                 }
 
+                //regardless of above send the bird to deliver its letter
+                BirdScriptRefrence.BirdArriving();
+                Debug.Log("Bird will arrive after delay.");
+
             }
 
             // [NOT USED]
@@ -68,8 +75,7 @@ public class UsePotion : MonoBehaviour
 
             }
 
-            //regardless of above send the bird to deliver its letter
-            Debug.Log("Bird will arrive after delay.");
+
 
         }
     }

@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class ShowBrewingMenu : MonoBehaviour
 {
+    //this bool exists if the promt shouldnt be shown
+    public bool NotShowPromtOnExit = false;
+
     //existing canvases
     //promt canvas
     //main canvas to be shown
@@ -53,8 +56,20 @@ public class ShowBrewingMenu : MonoBehaviour
         Debug.Log("Exit button pressed");
         //BrewingMenuCanvas.enabled=false;
         //EPromtCanvas.enabled=true;
-        PromtObject.SetActive(true);
         CanvasObject.SetActive(false);
+
+        if (NotShowPromtOnExit == true)
+        {
+            //e promt is not to be shown again            
+            PromtObject.SetActive(false);
+        }
+
+        else
+        {
+            PromtObject.SetActive(true);
+        }
+
+        //dont use "return" in if statements you want code below to run
 
         //enable player controller
         PlayerController.enabled = true;

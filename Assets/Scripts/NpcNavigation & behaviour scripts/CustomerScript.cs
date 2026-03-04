@@ -31,7 +31,8 @@ public class CustomerScript : MonoBehaviour
 
     //what behaviour npc is exacuting.
     [SerializeField] private NPCBehaviour currentState;
-   
+
+    public bool IsNpcSoldier = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -106,11 +107,14 @@ public class CustomerScript : MonoBehaviour
         //refrence to other only needs to check for tag and not also gameobject
         if(other.tag == "PotionProduct") 
         {
-            Transform potion = other.transform; 
-           
-            //this should be moved elsewhere in regards to npc dialogue
-            currentState = NPCBehaviour.LeavingShop;
+            Transform potion = other.transform;
 
+            //if npc is preist ignore this
+            if (IsNpcSoldier == true)
+            {
+                //soldier npc will move away
+                currentState = NPCBehaviour.LeavingShop;
+            }
            //give the potion as an object
            potion.parent = transform;  //give the actual potion to the NPC
            potion.position = Vector3.zero;
