@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class FeedbackLetterScript : MonoBehaviour
 {
+    //the feedback letter
     public Image LetterImage;
 
+    //sprites for the image
     public Sprite SoldierFeedbackGood;
     public Sprite SoldierFeedbackBad;
 
-    //what feedback letter is to be showed
-    [SerializeField] public int PageResponse = 0;
+
+    //refrence to script
+    [Header("script refrence")]
+    public UsePotion SoldierPotionOutcome;
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,35 +32,22 @@ public class FeedbackLetterScript : MonoBehaviour
     }
 
 
-    //set sprite of leter based on the potion customer recived
+    //set sprite of letter based on the potion customer recived
     void Update()
     {
-        if (PageResponse == 0)
+        //if soldier got correct potion change image to good outcome
+        if (SoldierPotionOutcome.SoldierCorrectPotion == true)
         {
             LetterImage.sprite = SoldierFeedbackGood;
         }
 
-        else if (PageResponse == 1)
+        //otherwise display bad outcome
+        else
         {
             LetterImage.sprite = SoldierFeedbackBad;
         }
-
-        else
-        {
-            return; 
-        }
     }
 
-    public void GoodSoldierFeedback()
-    {
-        //set pageresponse value
-        PageResponse = 0;
-    }
 
-    public void BadSoldierFeedback()
-    {
-        //set pageresponse value
-        PageResponse = 1;
-    }
 
 }
