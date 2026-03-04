@@ -19,6 +19,7 @@ public class FeedbackLetterScript : MonoBehaviour
     public UsePotion SoldierPotionOutcome;
 
 
+    //this does not work if there isn't a rigidbody on the checker or object checked
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "BirdDelivery")

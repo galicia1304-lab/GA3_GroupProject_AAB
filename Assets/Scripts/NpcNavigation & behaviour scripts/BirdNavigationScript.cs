@@ -60,27 +60,15 @@ public class BirdNavigationScript : MonoBehaviour
 
     }
 
-    //cheking for the lette delivery
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "DeliverdLetter")
-        {
-            //change info of deliverd letter 
-            //set info of "page response" to letter 
-            // 0 = soldier good 1 = soldier bad
-            // 2 = church good 3 = church bad
-            
-
-            //move back after delivering letter.
-            currentState = NPCBehaviour.ExitingShop;
-
-            Debug.Log("bird intends to leave shop");
-        }
-    }
-
+ 
     //customer script calls on this to deliver the letter
     public void BirdArriving()
     {
         currentState = NPCBehaviour.DeliveringLetter;
+    }
+
+    public void BirdLeaveing()
+    {
+        currentState = NPCBehaviour.ExitingShop;
     }
 }
